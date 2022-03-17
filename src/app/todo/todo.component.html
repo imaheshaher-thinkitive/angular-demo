@@ -2,6 +2,6 @@
 <button (click)="showName()">{{!isShowName ? "Show name":"Hide name"}}</button>
 
 <h3 *ngIf="isShowName">
-{{name}}
+{{name | uppercase}}
 
 </h3>
