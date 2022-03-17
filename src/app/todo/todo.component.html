@@ -1,4 +1,7 @@
 <p>todo works!</p>
-<button>show name</button>
+<button (click)="showName()">{{!isShowName ? "Show name":"Hide name"}}</button>
 
-<h3>{{name}}</h3>
+<h3 *ngIf="isShowName">
+{{name}}
+
+</h3>

@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
   name:String="Mahesh";
+  isShowName:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
 
   }
 
+  showName = () =>{
+    this.isShowName=!this.isShowName
+  }
 
 }
