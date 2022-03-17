@@ -2,6 +2,18 @@
 <button (click)="showName()">{{!isShowName ? "Show name":"Hide name"}}</button>
 
 <h3 *ngIf="isShowName">
-{{name | uppercase}}
+
 
 </h3>
+
+<h2>Todo App</h2>
+
+<form #f="ngForm" (ngSubmit)="addTodo()">
+    Add <input type="text"  placeholder="add todo" name="title" value="" ngModel/>
+    <button type="submit" >Submit</button>
+</form>
+
+<ul *ngFor="let i of todo">
+    <li>{{i.title}}</li>
+    
+</ul>
