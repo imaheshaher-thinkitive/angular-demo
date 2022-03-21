@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,7 @@ import { TodoComponent } from './todo/todo.component';
 import { CoursesComponent } from './courses/courses.component';
 import { SummayPipe } from './summary.pipe';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 
 @NgModule({
@@ -17,13 +18,15 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     TodoComponent,
     CoursesComponent,
     SummayPipe,
-    ContactFormComponent
+    ContactFormComponent,
+    SignupFormComponent
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     // TodoService

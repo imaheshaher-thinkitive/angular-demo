@@ -18,4 +18,5 @@ export class ContactFormComponent {
   submit(f:any){
     console.log(f.value)
   }
+ 
 }
