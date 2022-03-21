@@ -1,0 +1,17 @@
+// 17-03-2022
+Setup angular
+to understanding folder structure
+Angular Fundamental
+Dispaly Data 
+Handling Event
+Directives
+Template driven form
+looking for validation form
+
+
+//21-03-2022
+Template-driven Forms
+Reactive Form 
+Consuming Http Services 
+Routing and Navigation 
+

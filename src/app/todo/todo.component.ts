@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TodoService } from '../todo.service';
 import { todoModal } from './todo.modal';
 
 @Component({
@@ -8,6 +9,11 @@ import { todoModal } from './todo.modal';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
+
+  constructor(service:TodoService){
+    // let service = new TodoService();
+    this.todo=service.getTodos();
+  }
   name:String="Mahesh";
   isShowName:boolean=false;
   todo=[{
@@ -15,7 +21,7 @@ export class TodoComponent implements OnInit {
     title:"First todo"
   }]
    
-  constructor() { }
+ 
 
   ngOnInit(): void {
 
