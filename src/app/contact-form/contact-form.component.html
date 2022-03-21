@@ -1,1 +1,30 @@
-<p>contact-form works!</p>
+<p>Contact Form</p>
+
+<form class="container" #f="ngForm" (ngSubmit)="submit(f)">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input required minlength="3" maxlength="10" ngModel  name="firstName" #firstName="ngModel" (click)="onClick(firstName)" type="text" id="firstName" class="form-control" />
+        <!-- Validation-->
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors">First name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="comment"></label>
+        <textarea ngModel name="comment" #comment="ngModel" id="comment" cols="30" rows="10"
+            class="form-control"></textarea>
+        </div>
+    <div class="form-group">
+        <label for="">
+
+        </label>
+        <div >
+            <select ngModel name="method" >
+                <option *ngFor="for let method of components" [ngValue]="method">{{ method.name }}</option>
+            </select>
+
+        </div>
+    </div>
+        <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+        {{f.value | json}}
+</form>
