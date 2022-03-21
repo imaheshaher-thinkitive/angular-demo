@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TodoService } from './todo.service';
 import { TodoComponent } from './todo/todo.component';
 import { CoursesComponent } from './courses/courses.component';
+import { SummayPipe } from './summary.pipe';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { CoursesComponent } from './courses/courses.component';
     AppComponent,
     TodoComponent,
     CoursesComponent,
+    SummayPipe,
+    ContactFormComponent
     
   ],
   imports: [

@@ -1,0 +1,14 @@
+<h2>Cource Data</h2>
+<div>
+    {{courses.title | uppercase}}  <br/>
+    {{courses.rating | number:'2.1-1'}} <br/>
+    {{courses.students | number}} <br/>
+    {{courses.price | currency:'AUD' }} <br/>
+    {{courses.releaseDate | date}} <br/>
+
+
+</div>
+<h3>Custom Pipe</h3>
+<div>
+    {{text | summary:'10':"true"}}
+</div>
