@@ -10,4 +10,5 @@ export class PostService{
   getPosts(){
     return this.http.get(this.url)
   }
+  
 }
