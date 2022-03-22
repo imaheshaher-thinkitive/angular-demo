@@ -17,7 +17,9 @@ const routes: Routes = [
   {path:'second-component',component:SecondComponentComponent},
   {path:'sign-up',component:SignupFormComponent},
   {path:'contact',component:ContactFormComponent},
-  {path:'**',component:NotFoundComponent}
+  {path:'admin',loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)},
+  {path:'**',component:NotFoundComponent},
+  
 
 ];
 
