@@ -1,10 +1,34 @@
-<h1>Demo</h1>
-<!-- <app-todo></app-todo> -->
-<!-- <app-courses></app-courses> -->
-<!-- <app-contact-form></app-contact-form>
-<hr />
-<app-crud></app-crud>
-<hr />
-<signup-form></signup-form> -->
-<a routerLink="first-component">First Component</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="post">Posts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+     (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link"  [routerLink]="['/first-component','mahesh']">First Page</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="second-component">Second Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="todo">Todo</a>
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav right-nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="sign-up">Sign Up</a>
+              </li>
+
+        </ul>
+        </div>
+        </nav>
+
+
 <router-outlet></router-outlet>

@@ -16,13 +16,10 @@ import { PostService } from './services/post.service';
 import { RouterModule } from '@angular/router';
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { SecondComponentComponent } from './second-component/second-component.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthComponentComponent } from './auth-component/auth-component.component';
 
-const routes = [
-  {path:'',component:CrudComponent},
-  {path:'see/todo',component:CoursesComponent},
-  {path:'first-component',component:FirstComponentComponent},
-  {path:'second-component',component:SecondComponentComponent}
-]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +30,9 @@ const routes = [
     SignupFormComponent,
     CrudComponent,
     FirstComponentComponent,
-    SecondComponentComponent
+    SecondComponentComponent,
+    NotFoundComponent,
+    AuthComponentComponent
 
     
   ],
@@ -42,11 +41,10 @@ const routes = [
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule
     ],
   providers: [
-    // TodoService
+    TodoService,
     PostService
     
   ],

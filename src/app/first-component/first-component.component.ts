@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-first-component',
@@ -11,9 +12,8 @@ export class FirstComponentComponent implements OnInit {
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params=>{
-      console.log(params)
-    })
+    const name=this.route.snapshot.paramMap.get('name');
+    console.log(name)
   }
 
 }

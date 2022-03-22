@@ -15,3 +15,18 @@ Reactive Form
 Consuming Http Services 
 Routing and Navigation 
 
+//status
+Pipes,
+custom Pipe,
+Template driven form,
+ngModel,
+Reactive Form,
+validation Error ,
+Consuming Http Services,
+HttpClientModule,
+Routing,
+Configure Route,
+RouterOutlet,
+RouteParameter
+
+//22
