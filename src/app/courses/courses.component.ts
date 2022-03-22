@@ -15,6 +15,7 @@ export class CoursesComponent implements OnInit {
   // constructor() { }
 
   ngOnInit(): void {
+    
   }
   /* courses.component.html
 
