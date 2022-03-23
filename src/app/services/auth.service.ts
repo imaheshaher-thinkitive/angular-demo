@@ -19,4 +19,7 @@ export class AuthService {
     else if(token.trim()=="")return false
     return true
   }
+  getToken(){
+    return localStorage.getItem("token")
+  }
 }
