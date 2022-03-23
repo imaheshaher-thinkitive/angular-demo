@@ -30,3 +30,25 @@ RouterOutlet,
 RouteParameter
 
 //22
+
+Authentication
+Authentication
+Error Handling
+Firebase with angular
+
+
+RxJS
+Routing
+Error Handling
+Http Interceptor
+Lazy Loading
+Dipendancy Injection
+Observable
+looking for auth guard
+
+
+//23-03-2022
+Auth guard
+Roll based authentication
+Unit testing
+Reusable Component

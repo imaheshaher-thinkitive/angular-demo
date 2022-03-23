@@ -15,7 +15,7 @@ export class SignupFormComponent {
     password:new FormControl('',Validators.required),
     topics:new FormArray([])
   })
-  get username(){
+  get username(){ 
     return this.signupForm.get('username')
   }
   addTopic(topic:HTMLInputElement){

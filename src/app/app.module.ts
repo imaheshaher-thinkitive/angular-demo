@@ -20,6 +20,7 @@ import { AuthComponentComponent } from './auth-component/auth-component.componen
 import { CourseService } from './services/course.service';
 import { TodoService } from './services/todo.service';
 import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
       provide:HTTP_INTERCEPTORS,
       useClass:HttpInterceptorInterceptor,
       multi:true
-    }
+    },
+    AuthGuard
     
   ],
   bootstrap: [AppComponent]
