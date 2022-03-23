@@ -1,1 +1,3 @@
 <p>first-component works!</p>
+{{message}}
+<app-second-component [name]="name" (getName)="message=$event"></app-second-component>

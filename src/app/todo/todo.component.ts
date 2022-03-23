@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ProfileService } from '../services/profile.service';
 import { TodoService } from '../services/todo.service';
 import { todoModal } from './todo.modal';
 
@@ -10,9 +11,12 @@ import { todoModal } from './todo.modal';
 })
 export class TodoComponent implements OnInit {
   todo:any;
-  constructor(private service:TodoService){
+  constructor(private service:TodoService,private profileService:ProfileService){
     service.getTodo().subscribe(response=>{
       this.todo=response
+    })
+    profileService.authUser().subscribe(response=>{
+      console.log(response)
     })
   }
   name:String="Mahesh";

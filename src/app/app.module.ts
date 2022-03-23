@@ -21,7 +21,7 @@ import { CourseService } from './services/course.service';
 import { TodoService } from './services/todo.service';
 import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
 import { AuthGuard } from './auth.guard';
-
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { AuthGuard } from './auth.guard';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
     ],
   providers: [
     PostService,
@@ -55,6 +56,12 @@ import { AuthGuard } from './auth.guard';
       useClass:HttpInterceptorInterceptor,
       multi:true
     },
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptorService,
+      multi:true
+    },
+
     AuthGuard
     
   ],

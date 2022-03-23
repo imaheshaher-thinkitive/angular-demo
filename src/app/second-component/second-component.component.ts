@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-second-component',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./second-component.component.css']
 })
 export class SecondComponentComponent implements OnInit {
-
+  @Input("name") myName=""
+  @Input() showName=true;
+  @Output() getName= new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onChange(){
+    this.showName=!this.showName
+  }
+  fireEvent(){
+    this.getName.emit("Message from child component")
+  }
 }
