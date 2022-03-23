@@ -30,16 +30,24 @@
       
                 <!-- Email input -->
                 <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3">Email address</label>
                   <input type="email" id="form3Example3" formControlName="email" class="form-control form-control-lg"
                     placeholder="Enter a valid email address" />
-                  <label class="form-label" for="form3Example3">Email address</label>
+                  <div class="alert alert-danger" *ngIf="email?.touched && email?.invalid">
+
+                    <div *ngIf="email?.errors?.['required']">Email is required</div>
+                    <div *ngIf="email?.errors?.['email']">Enter valid email</div>
+                  </div>
                 </div>
       
                 <!-- Password input -->
                 <div class="form-outline mb-3">
+                  <label class="form-label" for="form3Example4">Password</label>
                   <input type="password" id="form3Example4" formControlName="password" class="form-control form-control-lg"
                     placeholder="Enter password" />
-                  <label class="form-label" for="form3Example4">Password</label>
+                  <div *ngIf="password?.touched && password?.invalid">
+                 <div class="alert alert-danger" *ngIf="password?.errors?.['required']">Password is required</div>
+                </div>
                 </div>
       
                 <div class="d-flex justify-content-between align-items-center">
